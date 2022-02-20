@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: react-docker-app-prod
+    image: react-docker-app-prod
+    build:
+      context: .
+      target: production
+      dockerfile: Dockerfile.prod
+
+    ports:
+    - 80:80
